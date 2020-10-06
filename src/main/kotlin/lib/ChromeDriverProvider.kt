@@ -25,7 +25,7 @@ class ChromeDriverProvider : WebDriverProvider {
                 chromeOptions.setAcceptInsecureCerts(true)
                 // Для работы в Linux. В windows из за параметра, браузер не закрывается
                 chromeOptions.addArguments("--no-sandbox")
-                chromeOptions.addArguments("safebrowsing-disable-download-protection");
+                chromeOptions.addArguments("safebrowsing-disable-download-protection")
                 val prefs = HashMap<String, Any>()
                 prefs["directory_upgrade"] = true
                 chromeOptions.setExperimentalOption("prefs", prefs)

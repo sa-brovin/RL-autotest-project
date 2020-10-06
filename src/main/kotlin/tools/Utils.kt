@@ -9,10 +9,6 @@ object Utils {
 
     //region s
 
-    fun s(locator: By): SelenideElement {
-        return Selenide.`$`(locator)
-    }
-
     fun s(locator: String): SelenideElement {
         return Selenide.`$`(By.cssSelector(locator))
     }
@@ -21,23 +17,12 @@ object Utils {
         return this.`$`(By.cssSelector(locator))
     }
 
-    fun SelenideElement.s(locator: By): SelenideElement {
-        return this.`$`(locator)
-    }
     //endregion
 
     //region ss
 
-    fun ss(locator: By): ElementsCollection {
-        return Wait.waitForAndReturnElements({ Selenide.`$$`(locator) }, 2)
-    }
-
     fun ss(locator: String): ElementsCollection {
         return Wait.waitForAndReturnElements({ Selenide.`$$`(By.cssSelector(locator)) }, 2)
-    }
-
-    fun SelenideElement.ss(locator: String): ElementsCollection {
-        return Wait.waitForAndReturnElements({ this.`$$`(By.cssSelector(locator)) }, 2)
     }
 
     //endregion

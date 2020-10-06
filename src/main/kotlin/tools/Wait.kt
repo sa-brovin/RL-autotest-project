@@ -1,7 +1,6 @@
 package tools
 
 import com.codeborne.selenide.ElementsCollection
-import com.codeborne.selenide.SelenideElement
 import com.codeborne.selenide.WebDriverRunner
 import com.codeborne.selenide.impl.WebElementsCollectionWrapper
 import java.lang.Thread.sleep
